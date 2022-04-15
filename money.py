@@ -2,7 +2,7 @@ import datetime
 import cashflow
 # A=Annualy M=Monthly Q=Quarterly W=Weekly D=Daily
 
-cf = cashflow.CashFlow('Cash flow estimate')
+cf = cashflow.CashFlow('Cash flow forecast')
 
 #Generate data
 cf.add_event('Original balance', 50000, datetime.date(2022, 4, 15))
