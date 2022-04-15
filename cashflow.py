@@ -28,7 +28,7 @@ class CashFlow(object):
         Sort data by 1) date_of_activity ascending and 2) amount ascending before the export."""
         path = os.path.join(dirpath, filename)
         with open(path, 'w') as csvfile:
-            csv_writer = csv.writer(csvfile, delimiter=';')
+            csv_writer = csv.writer(csvfile, delimiter=',')
             csv_writer.writerow(self.columns)
             self.series.sort_values(by=['date_of_activity', 'amount'], ascending=[True, True], inplace=True)
             for index, record in self.series.iterrows():
